@@ -13,8 +13,6 @@ library(airway)
 data(airway)
 airway
 
-
-
 #Convert data into simple Rows as Samples and columns as info
 
 sample_info <- as.data.frame(colData(airway))
@@ -23,12 +21,10 @@ sample_info <- as.data.frame(colData(airway))
 
 sample_info <- sample_info[,c(2,3)]
 
-
 #change labels into more readable format
 
 sample_info$dex <- gsub('trt','treated', sample_info$dex)
 sample_info$dex <- gsub('untrt','untreated', sample_info$dex)
-
 
 # Change column names into more readable format
 
